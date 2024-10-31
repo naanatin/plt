@@ -32,3 +32,7 @@ class TestPigLatin(unittest.TestCase):
     def test_translator_move_two_consonants(self):
         translator = PigLatin("known")
         self.assertEqual("ownknay", translator.translate())
+
+    def test_translator_one_consonant(self):
+        translator = PigLatin("k")
+        self.assertEqual("kay", translator.translate())
