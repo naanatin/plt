@@ -1,3 +1,5 @@
+import re
+
 class PigLatin:
 
     def __init__(self, phrase: str):
@@ -46,3 +48,7 @@ class PigLatin:
             new_word = new_word + "ay"
 
         return new_word
+
+    def contains_invalid_chars(self, s: str) -> bool:
+        pattern = r"[^a-zA-Z.,;:'?!()\s]"
+        return bool(re.search(pattern, s))

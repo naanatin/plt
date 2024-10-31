@@ -52,3 +52,7 @@ class TestPigLatin(unittest.TestCase):
     def test_translate_with_spaces_and_hyphens(self):
         translator = PigLatin("hello world well-being")
         self.assertEqual("ellohay orldway ellway-eingbay", translator.translate())
+
+    def test_translate_with_valid_punctuation(self):
+        translator = PigLatin("hello world!")
+        self.assertEqual("ellohay orldway!", translator.translate())
