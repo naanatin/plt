@@ -44,3 +44,7 @@ class TestPigLatin(unittest.TestCase):
     def test_translate_multiple_words(self):
         translator = PigLatin("hello world")
         self.assertEqual("ellohay orldway", translator.translate())
+
+    def test_translate_with_hyphens(self):
+        translator = PigLatin("well-being")
+        self.assertEqual("ellway-eingbay", translator.translate())
