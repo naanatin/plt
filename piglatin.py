@@ -13,3 +13,4 @@ class PigLatin:
 
         if phrase.endswith("y"):
             return phrase + "nay"
+        return phrase + "yay"
