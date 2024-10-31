@@ -12,7 +12,7 @@ class PigLatin:
         phrase = self.get_phrase()
         vowels = ("a","e","i","o","u")
         i = 0
-        while phrase[0] not in vowels and len(phrase) > 1 and i < len(phrase):
+        while phrase[0] not in vowels and i < len(phrase):
             phrase = phrase[1:] + phrase[0]
             i += 1
 
