@@ -31,18 +31,18 @@ class PigLatin:
         return ' '.join(translation)
 
     def process_word(self, word: str) -> str:
-        self._word = word
+        new_word = word
         vowels = ("a", "e", "i", "o", "u")
         i = 0
-        while self._word[0] not in vowels and i < len(self._word):
-            self._word = self._word[1:] + self._word[0]
+        while new_word[0] not in vowels and i < len(new_word):
+            new_word = new_word[1:] + new_word[0]
             i += 1
 
-        if self._word.endswith("y"):
-            self._word = self._word + "nay"
-        elif self._word.endswith(vowels):
-            self._word = self._word + "yay"
+        if new_word.endswith("y"):
+            new_word = new_word + "nay"
+        elif new_word.endswith(vowels):
+            new_word = new_word + "yay"
         else:
-            self._word = self._word + "ay"
+            new_word = new_word + "ay"
 
-        return self._word
+        return new_word
