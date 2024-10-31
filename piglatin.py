@@ -13,4 +13,6 @@ class PigLatin:
 
         if phrase.endswith("y"):
             return phrase + "nay"
-        return phrase + "yay"
+        elif phrase.endswith(("a","e","i","o","u")):
+            return phrase + "yay"
+        return phrase + "ay"
